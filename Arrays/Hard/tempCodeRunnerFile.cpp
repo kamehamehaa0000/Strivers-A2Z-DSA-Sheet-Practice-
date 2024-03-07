@@ -1,0 +1,1 @@
+nums[i], prod1 * nums[i], prod2 * nums[i]
