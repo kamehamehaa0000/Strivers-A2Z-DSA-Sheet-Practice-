@@ -1,2 +1,6 @@
+*.exe
+*.o
+*.so
 .vscode
-.exe
+### VisualStudioCode ###
+.vscode/*      

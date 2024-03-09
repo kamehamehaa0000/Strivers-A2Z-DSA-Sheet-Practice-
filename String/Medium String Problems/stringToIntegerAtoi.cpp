@@ -27,7 +27,7 @@ int myAtoi(string s)
         if (s[i] >= '0' && s[i] <= '9') // check for digit
         {
             ans = ans * 10 + (s[i] - '0');
-            // check overflow
+            // check for overflow
             if (ans > INT_MAX && sign == -1)
             {
                 return INT_MIN;
