@@ -10,39 +10,52 @@ struct ListNode
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 /*Brute force - using hashing
-bool hasCycle(ListNode *head)
+int lengthOfLoop(ListNode *head)
 {
     unordered_map<ListNode *, int> mpp;
     ListNode *temp = head;
+    int timer = 1;
+
     while (temp != nullptr)
     {
         if (mpp.find(temp) != mpp.end())
         { // node already visited
-            return true;
+            int value = mpp[temp];
+            return timer - value;
         }
-        mpp[temp] = 1; // storing current node in hashmap
+        mpp[temp] = timer; // storing current node in hashmap
+        timer++;
         temp = temp->next;
     }
-    return false;
+    return 0;
 }*/
 
-/*Optimal using tortoise and hare method*/
-bool hasCycle(ListNode *head)
+/*Optimal using tortoise and hair method*/
+int findLen(ListNode *slow, ListNode *fast)
 {
-    if (head == nullptr)
+    int cnt = 1;
+    fast = fast->next;
+    while (slow != fast)
     {
-        return false;
+        cnt++;
+        fast = fast->next;
+        slow = slow->next;
     }
+    return cnt;
+}
+int lengthOfLoop(ListNode *head)
+{
     ListNode *slow = head;
     ListNode *fast = head->next;
     while (fast != nullptr && fast->next != nullptr)
     {
+
         if (slow == fast)
         {
-            return true;
+            return findLen(slow, fast);
         }
         slow = slow->next;
         fast = fast->next->next;
     }
-    return false;
+    return 0;
 }
