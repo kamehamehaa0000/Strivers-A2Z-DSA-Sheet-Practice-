@@ -87,8 +87,8 @@ int helper(Node *head)
     }
     else
     {
-        head->data %= 10; // Adjust current digit
-        return 1;         // Indicate carry
+        head->data = 0; // Adjust current digit
+        return 1;       // Indicate carry
     }
 }
 
