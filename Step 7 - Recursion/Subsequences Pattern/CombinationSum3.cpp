@@ -36,3 +36,35 @@ vector<vector<int>> combinationSum3(int k, int n)
     helper(1, temp, ans, n, k);
     return ans;
 }
+
+/* 2nd way to write same code*/
+void helper(int ind, int sum, int n, int k, vector<int> &temp, vector<vector<int>> &ans)
+{
+    if (sum == n && k == 0)
+    {
+        ans.push_back(temp);
+        return;
+    }
+    if (sum > n)
+    {
+        return;
+    }
+    for (int i = ind; i <= 9; i++)
+    {
+        if (i > n)
+        {
+            break;
+        }
+        temp.push_back(i);
+        helper(i + 1, sum + i, n, k - 1, temp, ans);
+        temp.pop_back();
+    }
+}
+vector<vector<int>> combinationSum3(int k, int n)
+{
+
+    vector<vector<int>> ans;
+    vector<int> temp;
+    helper(1, 0, n, k, temp, ans);
+    return ans;
+}
