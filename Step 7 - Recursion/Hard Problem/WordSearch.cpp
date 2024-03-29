@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 bool searchNext(vector<vector<char>> &board, string word, int i, int j, int index, int m, int n)
 {
     // index reached the end i.e word is found
