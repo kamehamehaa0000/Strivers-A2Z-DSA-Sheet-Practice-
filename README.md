@@ -9,7 +9,7 @@ Welcome to my repository for the Strivers A2Z DSA (Data Structures and Algorithm
 
 ## Progress
 
-I have already completed **118 problems** within the initial 30-40 days of starting this repository. This progress demonstrates my dedication to consistent learning and improvement in the realm of data structures and algorithms.
+I have already completed **118 problems** within the initial 30-40 days before starting this repository. This progress demonstrates my dedication to consistent learning and improvement in the realm of data structures and algorithms.
 
 ## Daily Progress
 
