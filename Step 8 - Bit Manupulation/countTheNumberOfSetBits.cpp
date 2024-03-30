@@ -63,11 +63,7 @@ int countSetBits(int N)
     int d = 2, ans = 0, x = N;
     while (x)
     {
-
-        // Using the Mathematical formula explained in the Approach.
         ans += ((N + 1) / d) * (d / 2) + max((N + 1) % d - d / 2, 0);
-
-        // Window size double every time we shift to the next left bit.
         d *= 2;
         x /= 2;
     }
