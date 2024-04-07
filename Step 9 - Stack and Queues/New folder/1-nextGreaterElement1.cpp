@@ -20,10 +20,7 @@ vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2)
 
         if (!st.empty())
         {
-            if (i < n)
-            {
-                mpp[nums2[i]] = st.top();
-            }
+            mpp[nums2[i]] = st.top();
         }
 
         st.push(nums2[i]);
