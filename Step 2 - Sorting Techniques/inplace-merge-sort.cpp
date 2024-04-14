@@ -53,3 +53,46 @@ int main()
 
     return 0;
 }
+
+/*leetcode
+void merge(vector<int> &nums, int low, int mid, int high)
+{
+    if (low >= high)
+    {
+        return;
+    }
+    int l = low, r = mid + 1;
+    while (l <= mid and r <= high)
+    {
+        if (nums[l] <= nums[r])
+        {
+            l++;
+        }
+        else
+        {
+            int val = nums[r];
+            for (int k = r++; k > l; k--)
+            {
+                nums[k] = nums[k - 1];
+            }
+            nums[l++] = val;
+            mid++;
+        }
+    }
+}
+
+void mergeSort(vector<int> &nums, int low, int high)
+{
+    if (low >= high)
+        return;
+    int mid = (high - low) / 2 + low;
+    mergeSort(nums, low, mid);
+    mergeSort(nums, mid + 1, high);
+    merge(nums, low, mid, high);
+}
+vector<int> sortArray(vector<int> &nums)
+{
+    mergeSort(nums, 0, nums.size() - 1);
+    return nums;
+}
+*/
