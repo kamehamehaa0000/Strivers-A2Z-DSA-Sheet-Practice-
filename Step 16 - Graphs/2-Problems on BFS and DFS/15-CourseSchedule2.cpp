@@ -29,7 +29,10 @@ public:
     {
 
         int n = numCourses;
-        vector<int> adj[n + 1], vis(n + 1, 0), pathVis(n + 1, 0), res;
+        vector<int> adj[n + 1];
+        vector<int> vis(n + 1, 0);
+        vector<int> pathVis(n + 1, 0);
+        vector<int> res;
 
         for (auto x : prerequisites) // building graph
         {
@@ -41,7 +44,9 @@ public:
             if (!vis[i])
             {
                 if (dfsCycle(i, vis, pathVis, adj, res))
+                {
                     return {};
+                }
             }
         }
 
