@@ -24,11 +24,4 @@ Feel free to contribute by suggesting improvements to existing solutions, provid
 - **Problem Category **: will have solution of each problem in that category.
   - **Problem statement**: You can go to the official sheet site.
   - **Solution **: My solution to the problem -- most of them are in order of brute force > better > optimal.
-  
-
-
-
-You can refer to this repo for missing solution that are easy and beginner friendly.
-Let's embark on this journey of continuous learning and improvement together!
-
-Happy Coding! 🚀
+ 
