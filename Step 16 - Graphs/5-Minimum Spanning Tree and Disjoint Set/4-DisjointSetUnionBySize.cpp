@@ -74,3 +74,42 @@ int main()
         cout << "Not same\n";
     return 0;
 }
+
+/*class DisjointSet
+{
+    vector<int> parent;
+    vector<int> size;
+
+    DisjointSet(int maxSize)
+    {
+        parent.resize(maxSize);
+        size.resize(maxSize);
+        for (int i = 0; i < maxSize; i++)
+        {
+            parent[i] = i;
+            size[i] = 1;
+        }
+    }
+
+    int findUltimateParent(int v)
+    {
+        if (v == parent[v])
+            return v;
+        return parent[v] = findUltimateParent(parent[v]);
+    }
+
+    void union_set(int a, int b)
+    {
+        a = findUltimateParent(a);
+        b = findUltimateParent(b);
+        if (a != b)
+        {
+            if (size[a] < size[b])
+            {
+                swap(a, b);
+            }
+            parent[b] = a;
+            size[a] += size[b];
+        }
+    }
+};*/
